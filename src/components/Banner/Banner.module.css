@@ -1,0 +1,187 @@
+
+.Banner {
+  width: 100%;
+  height: 110vh;
+  margin-top: 0;
+  padding: 250px 0 100px 0;
+
+
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 98, 121, 1) 29%, rgba(21, 44, 67, 1) 100%); */
+  /* background: rgb(63,94,251);
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
+  /* background: rgb(63,94,251);
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(103,89,221,1) 23%, rgba(114,25,158,1) 52%, rgba(184,0,130,1) 69%, rgba(128,0,130,1) 100%);} */
+}
+.starrysky {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: radial-gradient(circle at center, #000, #010d29); */
+  /* background: radial-gradient(circle at center, #38363e, #010d29); */
+  /* background: radial-gradient(circle at center, #272728, #010d29); */
+}
+
+.star, .planet {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  animation: twinkle 2s infinite ease-in-out;
+  position: absolute;
+  z-index: 1;
+}
+
+.planet {
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #f0f, #5050ff);
+  position: absolute;
+  z-index: 0;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+a{
+  text-decoration: none !important;
+}
+.Banner .tagline {
+  font-weight: bold;
+  padding: 8px 10px;
+  position: relative;
+}
+.Banner .Recommendation{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+.Banner .RecData{
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+.Banner .RecData::before{
+  content: "";
+  background-color: #e5e5f7;
+  background: repeating-linear-gradient( 45deg, #14003b, #14003b 2px, #e5e5f7 2px, #e5e5f7 10px );
+  /* background: radial-gradient(circle, #f0f, #5050ff); */
+  opacity: 0.4;
+  position: absolute;
+  transition: 300ms ease-in;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.Banner .RecData:hover::before{
+  width: 100%;
+  
+}
+.input {
+ border: none;
+ padding: 1rem;
+ border-radius: 1rem;
+ background: #e8e8e8;
+ box-shadow: 20px 20px 60px #c5c5c5,
+    -20px -20px 60px #ffffff;
+ transition: 0.3s;
+}
+
+.input:focus {
+ outline-color: #e8e8e8;
+ background: #e8e8e8;
+ box-shadow: inset 20px 20px 60px #c5c5c5,
+    inset -20px -20px 60px #ffffff;
+ transition: 0.3s;
+}
+.Banner h1 {
+  font-weight: 900;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.Banner p {
+  text-align: center;
+    margin-bottom: 0px;
+}
+
+.Banner button {
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid white;
+  padding: 10px;
+  position: relative;
+  background-color: transparent;
+  margin-top: 20px;
+  transition: 200ms ease-in-out;
+}
+
+.Banner button::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 200ms ease-in-out;
+}
+
+.Banner button:hover {
+  color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: white;
+  transition: 200ms ease-in-out;
+}
+
+.Banner button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.Banner .BannerImg {
+  width: 350px;
+  height: 300px;
+  animation: updown 3s linear infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+span.wrap {
+  border-right: 0.08em solid #666 !important;
+  color: rgb(245, 138, 138) !important;
+}

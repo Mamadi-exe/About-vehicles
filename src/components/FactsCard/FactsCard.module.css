@@ -1,0 +1,51 @@
+.Factsimgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 2px 2px 20px 0px #000000bd;
+} 
+
+.Factsimgbx::before {
+  content: "";
+  background: rgb(23, 18, 108);
+  background: linear-gradient(90deg, rgba(23, 18, 108, 1) 0%, rgba(26, 148, 179, 1) 44%, rgba(32, 121, 213, 1) 100%);
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 400ms ease-in-out;
+}
+
+.Factsimgbx:hover::before {
+  height: 100%;
+}
+
+.Factstxt {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 500ms ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+
+.Factsimgbx:hover .Factstxt {
+  top: 50%;
+  opacity: 1;
+}
+
+.Factstxt h4 {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.Factstxt span {
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+}

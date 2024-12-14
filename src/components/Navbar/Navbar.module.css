@@ -1,0 +1,227 @@
+nav.navbar {
+  padding: 0 18px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  transition: 300ms ease-in;
+}
+nav.navbar a.navbar-brand
+{
+  width: 10%;
+}
+
+.navbarBrandImg{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.navbar-link {
+  padding: 20px;
+}
+
+
+.navbar-link:hover {
+  color: #fa4a4a !important;
+  transition: 200ms ease-in;
+  border: 1px solid;
+  border-top-width: 0px;
+  border-bottom-width: 1px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  animation: selected 3s ease-in-out;
+}
+@keyframes selected {
+  0%, 100%{
+    border-bottom-width: 1px;
+  }
+  50%{
+    border-bottom-width: 0px;
+  }
+}
+
+span.navbar-text{
+  display: flex;
+  align-items: center;
+}
+/* The switch - the box around the slider */
+.switch {
+  --width-of-switch: 3.5em;
+  --height-of-switch: 2em;
+  /* size of sliding icon -- sun and moon */
+  --size-of-icon: 1.4em;
+  /* it is like a inline-padding of switch */
+  --slider-offset: 0.3em;
+  position: relative;
+  width: var(--width-of-switch);
+  height: var(--height-of-switch);
+  margin-top: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f4f4f5;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: var(--size-of-icon,1.4em);
+  width: var(--size-of-icon,1.4em);
+  border-radius: 20px;
+  left: var(--slider-offset,0.3em);
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+  ;
+ transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #303136;
+}
+
+input:checked + .slider::before {
+  left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+  background: #303136;
+  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+  box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+a{
+  text-decoration: none !important;
+}
+nav.navbar .tagline {
+  font-weight: bold;
+  padding: 8px 10px;
+  position: relative;
+}
+nav.navbar .Recommendation{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 50px;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+nav.navbar .RecData{
+  padding-top: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+nav.navbar .RecData::before{
+  content: "";
+  background-color: #e5e5f7;
+  background: repeating-linear-gradient( 45deg, #14003b, #14003b 2px, #e5e5f7 2px, #e5e5f7 10px );
+  /* background: radial-gradient(circle, #f0f, #5050ff); */
+  opacity: 0.4;
+  position: absolute;
+  transition: 300ms ease-in;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+nav.navbar .RecData:hover::before{
+  width: 100%;
+  
+}
+.input {
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #e8e8e8;
+  box-shadow: -5px -5px 60px #c5c5c5, 3px 4px 30px #ffffff;
+  transition: 0.3s;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  width: 250px !important;
+}
+
+.input:focus {
+ outline-color: #e8e8e8;
+ background: #e8e8e8;
+ box-shadow: inset 20px 20px 60px #c5c5c5,
+    inset -20px -20px 60px #ffffff;
+ transition: 0.3s;
+}
+.Social{
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.Social:hover{
+  opacity: 0.75;
+  transition: 200ms ease-in;
+  transform: scale(1.2);
+  
+}
+button.Contactme{
+  font-weight: 600;
+  padding: 10px;
+  position: relative;
+  background-color: transparent;
+  margin-bottom: 10px;
+  transition: 200ms ease-in-out;
+}
+button.Contactme::before{
+  content: "";
+  width: 0;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 200ms ease-in-out;
+}
+button.Contactme:hover{
+  background-color: white;
+  transition: 200ms ease-in-out;
+}
+button.Contactme:hover::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus{
+  outline: none;
+  box-shadow: none;
+}
+nav.navbar .navbar-toggler.icon{
+  width: 24px;
+  height: 18px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms linear;
+  top: -2px;
+}

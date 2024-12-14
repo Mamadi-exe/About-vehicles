@@ -1,0 +1,36 @@
+
+.Bio {
+  padding: 0 0 50px 0;
+  position: relative;
+  /* background: rgb(63,94,251);
+  background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(103,89,221,1) 23%, rgba(114,25,158,1) 52%, rgba(184,0,130,1) 69%, rgba(128,0,130,1) 100%); */
+}
+
+.Biobx {
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+  box-shadow: 0px 0px 20px 20px #00000057;
+}
+
+.Bio h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.Bio p {
+  color: #b8b8b8;
+  margin: 14px 0 75px 0;
+}
+
+.Bio-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.Bio-slider .Card img {
+  width: 170px;
+  margin: 0 auto 15px auto;
+}
